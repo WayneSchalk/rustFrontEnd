@@ -1,7 +1,7 @@
 use yew::prelude::*;
 
 struct Model {
-    value: i64
+    value: i64,
 }
 
 #[function_component(App)]
@@ -12,7 +12,7 @@ fn app() -> Html {
         let state = state.clone();
         Callback::from(move |_| {
             state.set(Model {
-                value : state.value +1 
+                value: state.value + 1,
             });
         })
     };
@@ -20,7 +20,7 @@ fn app() -> Html {
         let state = state.clone();
         Callback::from(move |_| {
             state.set(Model {
-                value : state.value -1 
+                value: state.value - 1,
             });
         })
     };
@@ -34,6 +34,6 @@ fn app() -> Html {
     }
 }
 
-fn main () {
+fn main() {
     yew::start_app::<App>();
 }
